@@ -1,0 +1,18 @@
+{% extends 'partial/temp1.html' %}
+
+
+
+{% block content %}
+
+<div class="card mb-3" style="height: 700px; width: 50%;">
+    <img src="{{data.image }}" class="card-img-top" alt="..." style="height: 70%; width: 100%; object-fit: cover; object-position: top;" >
+    <div class="card-body" style="height: 300px;">
+      <h5 class="card-title">{{data.title}}</h5>
+      <p class="card-text">{{data.des}}</p>
+      <p class="card-text"><small class="text-body-secondary">Created {{data.date}}</small></p>
+    </div>
+  </div>
+ 
+
+
+{% endblock %}

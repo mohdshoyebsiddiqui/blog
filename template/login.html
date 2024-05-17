@@ -1,0 +1,32 @@
+{% extends 'partial/temp1.html' %}
+
+
+{% block content %}
+{{err}}
+<form action="" method="post">
+{% csrf_token %}
+
+
+<div class="mb-3s">
+    <label class="form-label">Username  </label>  
+    <input type="text" name="username">
+</div>
+
+<div class="mb-3s">
+    <label  class="form-label">Password  </label>  
+    <input type="password" name="password">
+</div>
+
+<input type="submit" value="save">
+</form>
+
+
+<!-- <div class="mb-3s">
+    <label for="exampleInputEmail1" class="form-label">{{fm.username.label}}  </label>  
+    {{fm.username }}
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'partial/temp1.html' %}
+
+
+
+{% block content %}
+<style>
+.main h1{
+    padding-top: 100px;
+    text-align: center;
+} 
+
+.main a{
+  color:black !important;
+}
+.article{
+    
+}
+</style>
+<h1>Search '{{ search }}' {{data}}</h1>
+<div class="row row-cols-1 article row-cols-md-2 g-4">
+   {% for i in data %}
+    <div class="col">
+      <div class="card">
+        
+        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'article' id=i.id %}">{{ i.title }}</a></h5>
+          <p class="card-text">{{ i.des|slice:"0:150" }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+
+
+   
+  </div>
+
+{% endblock %}
+    
+
+
